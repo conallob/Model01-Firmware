@@ -339,7 +339,17 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   /* alfredapp.com is configured to trigger on Cmd+Space */
   case MACRO_ALFRED:
     return MACRODOWN(D(Key_LeftGui), T(Key_Spacebar), U(Key_LeftGui));
-    break;        
+    break;
+
+  /* System Power button, to preserve the feel of an Apple Keyboard */
+  case MACRO_POWER:
+    return MACRODOWN(D(System_PowerDown), U(System_PowerDown));
+    break;
+  
+  /* Mission Control hotkey defaults to F9 */
+  case MACRO_MISSIONCONTROL:
+    return MACRODOWN(D(Key_F9), U(Key_F9));
+    break;
     
   case MACRO_ANY:
     anyKeyMacro(keyState);
