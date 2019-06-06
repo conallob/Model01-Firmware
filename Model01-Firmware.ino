@@ -63,7 +63,7 @@
 #include "Kaleidoscope-Colormap.h"
 
 // Support for Keyboardio's internal keyboard testing mode
-#include "Kaleidoscope-Model01-TestMode.h"
+#include "Kaleidoscope-HardwareTestMode.h"
 
 // Support for host power management (suspend & wakeup)
 #include "Kaleidoscope-HostPowerManagement.h"
@@ -470,7 +470,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
 
   // The hardware test mode, which can be invoked by tapping Prog, LED and the
   // left Fn button at the same time.
-  TestMode,
+  HardwareTestMode,
 
   // LEDControl provides support for other LED modes
   LEDControl,
