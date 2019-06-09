@@ -90,10 +90,13 @@
 enum { MACRO_VERSION_INFO,
        MACRO_ANY,
        /* Conall's Macros */
-      MACRO_LOCKSCREEN,
-      MACRO_ALFRED,
-      MACRO_POWER,
-      MACRO_MISSIONCONTROL
+       /*
+       TODO(conall): Re-enable, once I've worked out the syntax for macros
+       MACRO_LOCKSCREEN,
+       MACRO_ALFRED,
+       MACRO_POWER,
+       MACRO_MISSIONCONTROL
+       */
      };
 
 
