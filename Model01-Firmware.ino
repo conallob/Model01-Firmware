@@ -1,3 +1,5 @@
+#include <Model01-Firmware.h>
+
 // -*- mode: c++ -*-
 // Copyright 2016 Keyboardio, inc. <jesse@keyboard.io>
 // See "LICENSE" for license details
