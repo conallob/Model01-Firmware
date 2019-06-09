@@ -88,7 +88,12 @@
   */
 
 enum { MACRO_VERSION_INFO,
-       MACRO_ANY
+       MACRO_ANY,
+       /* Conall's Macros */
+      MACRO_LOCKSCREEN,
+      MACRO_ALFRED,
+      MACRO_POWER,
+      MACRO_MISSIONCONTROL
      };
 
 
@@ -334,13 +339,13 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
   /* OSX Lock Screen == Ctrl+Cmd+Q */
   case MACRO_LOCKSCREEN:
-    return MACRODOWN(D(LeftControl), D(Key_LeftGui), T(Q),
-                     U(LeftControl), U(Key_LeftGui));
+    return MACRODOWN(D(LeftControl), D(Key_LeftGui), D(Q),
+                     U(LeftControl), U(Key_LeftGui), U(Q));
     break;    
 
   /* alfredapp.com is configured to trigger on Cmd+Space */
   case MACRO_ALFRED:
-    return MACRODOWN(D(Key_LeftGui), T(Key_Spacebar), U(Key_LeftGui));
+    return MACRODOWN(D(Key_LeftGui), D(Key_Spacebar), U(Key_LeftGui), U(Key_Spacebar));
     break;
 
   /* System Power button, to preserve the feel of an Apple Keyboard */
