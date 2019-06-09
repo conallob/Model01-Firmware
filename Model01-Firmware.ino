@@ -339,28 +339,44 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   case MACRO_VERSION_INFO:
     versionInfoMacro(keyState);
     break;
-
+  
   /* OSX Lock Screen == Ctrl+Cmd+Q */
+  /*
+  TODO(conall): Re-enable, once I've worked out the syntax for macros
+ 
   case MACRO_LOCKSCREEN:
     return MACRODOWN(D(LeftControl), D(Key_LeftGui), D(Q),
                      U(LeftControl), U(Key_LeftGui), U(Q));
     break;    
-
+  */
+    
   /* alfredapp.com is configured to trigger on Cmd+Space */
+  /*
+  TODO(conall): Re-enable, once I've worked out the syntax for macros
+ 
   case MACRO_ALFRED:
     return MACRODOWN(D(Key_LeftGui), D(Key_Spacebar), U(Key_LeftGui), U(Key_Spacebar));
     break;
+  */
 
   /* System Power button, to preserve the feel of an Apple Keyboard */
+  /*
+  TODO(conall): Re-enable, once I've worked out the syntax for macros
+ 
   case MACRO_POWER:
     return MACRODOWN(D(System_PowerDown), U(System_PowerDown));
     break;
-  
+  */
+    
   /* Mission Control hotkey defaults to F9 */
+ /*
+  TODO(conall): Re-enable, once I've worked out the syntax for macros
+  
   case MACRO_MISSIONCONTROL:
     return MACRODOWN(D(Key_F9), U(Key_F9));
-    break;
-    
+    break;  
+  */
+   
   case MACRO_ANY:
     anyKeyMacro(keyState);
     break;
