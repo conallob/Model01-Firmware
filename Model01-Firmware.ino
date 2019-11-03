@@ -92,15 +92,11 @@
 
 enum { MACRO_VERSION_INFO,
        MACRO_ANY,
-       MACRO_LOCKSCREEN,      
        /* Conall's Macros */
-       /*
-       TODO(conall): Re-enable, once I've worked out the syntax for macros
-
+       MACRO_LOCKSCREEN,      
        MACRO_ALFRED,
        MACRO_POWER,
        MACRO_MISSIONCONTROL
-       */
      };
 
 
@@ -193,10 +189,10 @@ KEYMAPS(
    ShiftToLayer(FUNCTION),
 
    M(MACRO_LOCKSCREEN),  Key_6, Key_7, Key_8, Key_9,      Key_0,         LockLayer(NUMPAD),
-   Key_Enter,     Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_Equals,
-                  Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
-   Key_RightAlt,  Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
-   Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,
+   Key_Enter,            Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_Equals,
+   M(MACRO_ALRED)        Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
+   Key_RightAlt,         Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
+   Key_RightShift,       Key_LeftAlt, Key_Spacebar, Key_RightControl,
    ShiftToLayer(FUNCTION)),
 
 #elif defined (PRIMARY_KEYMAP_DVORAK)
@@ -349,36 +345,21 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
     return MACRODOWN(D(LeftControl), D(LeftGui), D(Q));
     break;
 
-  /*
-  TODO(conall): Re-enable, once I've worked out the syntax for macros      
-  */
-    
   /* alfredapp.com is configured to trigger on Cmd+Space */
-  /*
-  TODO(conall): Re-enable, once I've worked out the syntax for macros
  
   case MACRO_ALFRED:
-    return MACRODOWN(D(Key_LeftGui), D(Key_Spacebar), U(Key_LeftGui), U(Key_Spacebar));
+    return MACRODOWN(D(LeftGui), D(Spacebar));
     break;
-  */
 
   /* System Power button, to preserve the feel of an Apple Keyboard */
-  /*
-  TODO(conall): Re-enable, once I've worked out the syntax for macros
- 
   case MACRO_POWER:
     return MACRODOWN(D(System_PowerDown), U(System_PowerDown));
     break;
-  */
     
-  /* Mission Control hotkey defaults to F9 */
- /*
-  TODO(conall): Re-enable, once I've worked out the syntax for macros
-  
+  /* Mission Control hotkey defaults to F9 */  
   case MACRO_MISSIONCONTROL:
-    return MACRODOWN(D(Key_F9), U(Key_F9));
-    break;  
-  */
+    return MACRODOWN(D(F9), U(F9));
+    break;
    
   case MACRO_ANY:
     anyKeyMacro(keyState);
