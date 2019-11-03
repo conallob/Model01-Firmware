@@ -279,7 +279,7 @@ KEYMAPS(
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
    Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
-                               Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  ___,              ___,
+   System_PowerDown            Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  ___,              ___,
    Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe,
    ___, ___, Key_Enter, ___,
    ___)
@@ -350,17 +350,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   case MACRO_ALFRED:
     return MACRODOWN(D(LeftGui), D(Spacebar));
     break;
-
-  /* System Power button, to preserve the feel of an Apple Keyboard */
-  case MACRO_POWER:
-    return MACRODOWN(D(System_PowerDown), U(System_PowerDown));
-    break;
     
-  /* Mission Control hotkey defaults to F9 */  
-  case MACRO_MISSIONCONTROL:
-    return MACRODOWN(D(F9), U(F9));
-    break;
-   
   case MACRO_ANY:
     anyKeyMacro(keyState);
     break;
