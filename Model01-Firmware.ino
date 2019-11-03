@@ -346,7 +346,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
   /* OSX Lock Screen == Ctrl+Cmd+Q */
   case MACRO_LOCKSCREEN:
-    return MACRODOWN(D(LeftControl), D(Key_LeftGui), D(Q));
+    return MACRODOWN(D(LeftControl), D(LeftGui), D(Q));
     break;
 
   /*
