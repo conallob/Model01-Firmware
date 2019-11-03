@@ -343,14 +343,14 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   case MACRO_VERSION_INFO:
     versionInfoMacro(keyState);
     break;
-  
+
   /* OSX Lock Screen == Ctrl+Cmd+Q */
-  /*
-  TODO(conall): Re-enable, once I've worked out the syntax for macros
- 
   case MACRO_LOCKSCREEN:
     return MACRODOWN(D(LeftControl), D(Key_LeftGui), D(Q));
-    break;    
+    break;
+
+  /*
+  TODO(conall): Re-enable, once I've worked out the syntax for macros      
   */
     
   /* alfredapp.com is configured to trigger on Cmd+Space */
