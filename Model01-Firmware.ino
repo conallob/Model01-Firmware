@@ -92,10 +92,11 @@
 
 enum { MACRO_VERSION_INFO,
        MACRO_ANY,
+       MACRO_LOCKSCREEN,      
        /* Conall's Macros */
        /*
        TODO(conall): Re-enable, once I've worked out the syntax for macros
-       MACRO_LOCKSCREEN,
+
        MACRO_ALFRED,
        MACRO_POWER,
        MACRO_MISSIONCONTROL
@@ -348,8 +349,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   TODO(conall): Re-enable, once I've worked out the syntax for macros
  
   case MACRO_LOCKSCREEN:
-    return MACRODOWN(D(LeftControl), D(Key_LeftGui), D(Q),
-                     U(LeftControl), U(Key_LeftGui), U(Q));
+    return MACRODOWN(D(LeftControl), D(Key_LeftGui), D(Q));
     break;    
   */
     
